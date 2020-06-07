@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0D3C5D248D6853006BFEBB /* AmiguinhoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0D3C5C248D6853006BFEBB /* AmiguinhoViewController.m */; };
 		FB8E90E9248ADB2F00116776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8E90E8248ADB2F00116776 /* AppDelegate.m */; };
 		FB8E90EC248ADB2F00116776 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8E90EB248ADB2F00116776 /* SceneDelegate.m */; };
 		FB8E90EF248ADB2F00116776 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8E90EE248ADB2F00116776 /* ViewController.m */; };
@@ -38,13 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB0D3C5B248D6853006BFEBB /* AmiguinhoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmiguinhoViewController.h; sourceTree = "<group>"; };
+		FB0D3C5C248D6853006BFEBB /* AmiguinhoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmiguinhoViewController.m; sourceTree = "<group>"; };
 		FB8E90E4248ADB2F00116776 /* Appteste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appteste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8E90E7248ADB2F00116776 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB8E90E8248ADB2F00116776 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB8E90EA248ADB2F00116776 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FB8E90EB248ADB2F00116776 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FB8E90ED248ADB2F00116776 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB8E90EE248ADB2F00116776 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB8E90ED248ADB2F00116776 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		FB8E90EE248ADB2F00116776 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		FB8E90F1248ADB2F00116776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB8E90F3248ADB3100116776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8E90F6248ADB3100116776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +107,33 @@
 			path = AmiguinhoTabelViewCell;
 			sourceTree = "<group>";
 		};
+		FB0D3C58248D5D62006BFEBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB0D3C5A248D6605006BFEBB /* Amiguinho */,
+				FB0D3C59248D5D7B006BFEBB /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB0D3C59248D5D7B006BFEBB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FB8E90ED248ADB2F00116776 /* ViewController.h */,
+				FB8E90EE248ADB2F00116776 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FB0D3C5A248D6605006BFEBB /* Amiguinho */ = {
+			isa = PBXGroup;
+			children = (
+				FB0D3C5B248D6853006BFEBB /* AmiguinhoViewController.h */,
+				FB0D3C5C248D6853006BFEBB /* AmiguinhoViewController.m */,
+			);
+			path = Amiguinho;
+			sourceTree = "<group>";
+		};
 		FB8E90DB248ADB2F00116776 = {
 			isa = PBXGroup;
 			children = (
@@ -127,14 +157,13 @@
 		FB8E90E6248ADB2F00116776 /* Appteste */ = {
 			isa = PBXGroup;
 			children = (
+				FB0D3C58248D5D62006BFEBB /* Views */,
 				FB8E9120248B22F300116776 /* Components */,
 				FB8E911C248AE3EA00116776 /* Models */,
 				FB8E90E7248ADB2F00116776 /* AppDelegate.h */,
 				FB8E90E8248ADB2F00116776 /* AppDelegate.m */,
 				FB8E90EA248ADB2F00116776 /* SceneDelegate.h */,
 				FB8E90EB248ADB2F00116776 /* SceneDelegate.m */,
-				FB8E90ED248ADB2F00116776 /* ViewController.h */,
-				FB8E90EE248ADB2F00116776 /* ViewController.m */,
 				FB8E90F0248ADB2F00116776 /* Main.storyboard */,
 				FB8E90F3248ADB3100116776 /* Assets.xcassets */,
 				FB8E90F5248ADB3100116776 /* LaunchScreen.storyboard */,
@@ -313,6 +342,7 @@
 				FB8E90E9248ADB2F00116776 /* AppDelegate.m in Sources */,
 				FB8E911F248AE42300116776 /* AmiguinhoModel.m in Sources */,
 				FB8E90FA248ADB3100116776 /* main.m in Sources */,
+				FB0D3C5D248D6853006BFEBB /* AmiguinhoViewController.m in Sources */,
 				FB8E90EC248ADB2F00116776 /* SceneDelegate.m in Sources */,
 				FB8E9123248B231800116776 /* AmiguinhoTableViewCell.m in Sources */,
 			);
