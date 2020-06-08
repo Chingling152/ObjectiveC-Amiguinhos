@@ -1,22 +1,21 @@
 //
-//  AmiguinhoViewController.h
+//  AmiguinhoRepository.h
 //  Appteste
 //
 //  Created by Space Needle on 07/06/20.
 //  Copyright © 2020 Space Needle. All rights reserved.
 //
 
-#import "ViewController.h"
-
+#import <Foundation/Foundation.h>
 #import "AmiguinhoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AmiguinhoViewController : ViewController
+@interface AmiguinhoRepository : NSObject
 
-@property AmiguinhoModel *amiguinho;
+-(void) createAmiguinho:(AmiguinhoModel *) amiguinho;
 
-- (void) initWithAmiguinho:(AmiguinhoModel *) amiguinho;
+-(NSMutableArray *) getAllAmiguinhos;
 
 @end
 

@@ -21,4 +21,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)onDeleteButtonClicked:(id)sender {
+    
+}
 @end

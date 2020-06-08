@@ -13,11 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AmiguinhoModel : NSObject//tudo aqui fica publico
 
 @property (readonly) NSInteger age;
+@property (readonly,nonnull) NSString *id;
 
 //instanceType : tipo da instancia atual
 - (instancetype) initAmiguinho:(NSString *)firstName
                       lastName:(NSString *)lastName
                            age:(NSInteger)age;
+
+- (instancetype) initAmiguinhoFromJson:(NSDictionary *) json;
 
 - (NSString *) fullName;
 

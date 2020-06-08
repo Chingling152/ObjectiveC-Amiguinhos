@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "AmiguinhoRepository.h"//repository
+
 #import "AmiguinhoModel.h"//models
 
 #import "AmiguinhoTableViewCell.h"//componentes
@@ -17,6 +19,8 @@
 //Faz a pagina ter metodos de extensão de uma TableViewController
 //TODO : Mover pra um componente separado (?)
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (strong,nonatomic) AmiguinhoRepository *repos;
 
 // Input de nome (Da pra fazer um componente disso)
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -39,10 +43,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _amiguinhos = [[NSMutableArray alloc] init];
-    AmiguinhoModel *amiguinho = [[AmiguinhoModel alloc] initAmiguinho:@"Nome" lastName:@"aaaa" age:12];
-    
-    [_amiguinhos addObject:amiguinho];
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    [self getAmiguinhos];
+    [_amiguinhos addObject:[[AmiguinhoModel alloc] initAmiguinho:@"Nome" lastName:@"aaaa" age:12]];
+}
+
+-(void) getAmiguinhos{
+    _repos = [[AmiguinhoRepository alloc] init];
+    _amiguinhos = [_repos getAllAmiguinhos];
+    [_tableView reloadData];
 }
 
 - (void) clearFields{
@@ -119,11 +130,15 @@ cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {//define metodo (nesse c
     return cell;
 }
 
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)
+tableView:(nonnull UITableView *)tableView
+numberOfRowsInSection:(NSInteger)section {
     return _amiguinhos.count;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)
+tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     _selectedAmiguinho = indexPath.row;//seleciona a linha clicada
     [self performSegueWithIdentifier:@"goto_amiguinho" sender:tableView];//faz um redirecionamento para um segue nomeado
 }

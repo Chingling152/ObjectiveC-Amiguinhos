@@ -45,4 +45,13 @@
         return _firstName;
 }
 
+- (instancetype) initAmiguinhoFromJson:(NSDictionary *) json{
+    if(self = [super init]){//se inicializou
+        if(json){
+            [self setValuesForKeysWithDictionary:json];
+        }
+    }
+    
+    return self;
+}
 @end

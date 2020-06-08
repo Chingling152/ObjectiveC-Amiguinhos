@@ -9,11 +9,21 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+@protocol AmiguinhoCellProtocol <NSObject>
+
+- (void) deleteCell:(NSIndexPath *) indexPath;
+
+@end
+
 //COmponente que herda de TableViewCell
 @interface AmiguinhoTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+
+@property (nonatomic,weak) id <AmiguinhoCellProtocol> delegate;
+- (IBAction)onDeleteButtonClicked:(id)sender;
 
 @end
 
